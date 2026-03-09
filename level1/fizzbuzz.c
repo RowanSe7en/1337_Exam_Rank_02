@@ -2,11 +2,11 @@
 
 void numb(int x)
 {
-    char dec[] = "0123456789";
-
     if (x > 9)
         numb(x / 10);
-    write(1, &dec[x % 10], 1);
+
+    int dec = (x % 10) + 48;
+    write(1, &dec, 1);
 }
 
 int main()
